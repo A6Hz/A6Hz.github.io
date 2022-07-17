@@ -10,6 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useState, MouseEvent, useEffect } from "react";
 import CodeIcon from "@mui/icons-material/Code";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const pages = [
   { label: "Home", id: "home" },
@@ -33,6 +34,8 @@ const scrollIntoViewWithOffset = (selector: string) => {
 
 export const DesktopAppBar = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   /* Fix chrome scroll bug  */
   useEffect(() => {
@@ -45,7 +48,9 @@ export const DesktopAppBar = () => {
 
   const handleCloseNavMenu = (toId?: string) => {
     setAnchorElNav(null);
-    if (toId) scrollIntoViewWithOffset(toId);
+    if (toId) {
+      scrollIntoViewWithOffset(toId);
+    }
   };
 
   return (
@@ -148,10 +153,24 @@ export const DesktopAppBar = () => {
               justifyContent: "end",
             }}
           >
-            {pages.map((page) => (
+            {location.pathname === "/" ? (
+              pages.map((page) => (
+                <Button
+                  key={page.id}
+                  onClick={() => handleCloseNavMenu(page.id)}
+                  sx={{
+                    my: 2,
+                    color: "white",
+                    display: "block",
+                    alignSelf: "end",
+                  }}
+                >
+                  {page.label}
+                </Button>
+              ))
+            ) : (
               <Button
-                key={page.id}
-                onClick={() => handleCloseNavMenu(page.id)}
+                onClick={() => navigate("/")}
                 sx={{
                   my: 2,
                   color: "white",
@@ -159,9 +178,9 @@ export const DesktopAppBar = () => {
                   alignSelf: "end",
                 }}
               >
-                {page.label}
+                Back To home
               </Button>
-            ))}
+            )}
           </Box>
         </Toolbar>
       </Container>

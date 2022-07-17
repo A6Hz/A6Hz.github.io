@@ -1,3 +1,4 @@
+import { height } from "@mui/system";
 import { motion } from "framer-motion";
 
 const container = {
@@ -28,7 +29,13 @@ export function Banner() {
       variants={container}
       initial="hidden"
       animate="visible"
-      style={{ padding: 20, height: 950 }}
+      style={{
+        padding: 20,
+        height: "90vh",
+        minHeight: 500,
+        zIndex: 1,
+        backgroundColor: "black",
+      }}
     >
       <motion.p variants={item}>
         <span style={{ fontWeight: "bold", fontSize: 30, display: "block" }}>

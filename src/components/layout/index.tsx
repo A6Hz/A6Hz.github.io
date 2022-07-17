@@ -5,7 +5,7 @@ export function Layout(props: { children: ReactJSXElement }) {
   return (
     <>
       <ResponsiveAppBar />
-      <div style={{ marginTop: 80 }}>{props.children}</div>
+      <div style={{ marginTop: 69 }}>{props.children}</div>
     </>
   );
 }

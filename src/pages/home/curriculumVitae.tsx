@@ -25,10 +25,13 @@ export function CurriculumVitae() {
       <section
         id="cv"
         style={{
+          zIndex: 10,
           padding: 30,
           height: 600,
-          backgroundImage:
+          backgroundColor: "#fff",
+          /*backgroundImage:
             "linear-gradient(to left bottom, #43008c, #2e1775, #221d5b, #1d1d40, #1b1b24)",
+            */
         }}
       >
         <Grid container spacing={3}>

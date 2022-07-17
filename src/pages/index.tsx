@@ -6,7 +6,6 @@ import { LocalRoutes } from "./routes";
 
 const theme = createTheme({
   palette: {
-    mode: "dark",
     primary: {
       main: "#556cd6",
     },

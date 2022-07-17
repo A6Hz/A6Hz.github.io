@@ -1,5 +1,6 @@
 body {
   min-width: 300px;
+  background-color: black;
 }
 
 .social-cicle-border {
@@ -52,6 +53,12 @@ body {
   display: block;
   z-index: 2;
   max-width: 600px;
+  transition: transform;
+  transition-duration: 300ms;
+}
+
+.social-card-container:hover {
+  transform: scale(1.02);
 }
 
 .social-card-container:before {
@@ -104,4 +111,16 @@ body {
     #d6009d,
     #ff009c
   );
+}
+
+#test {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%);
 }

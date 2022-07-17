@@ -36,6 +36,7 @@ export function Contact() {
         style={{
           backgroundColor: "#fff",
           padding: 30,
+          zIndex: 3,
         }}
       >
         <Grid container spacing={3}>

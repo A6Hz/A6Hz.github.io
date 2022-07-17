@@ -1,22 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Layout } from "../components/layout";
+import { Areuin } from "./areuin";
 import { Home } from "./home";
 import { NotFound } from "./notFound";
-
-const LayoutElement = () => {
-  return (
-    <Layout>
-      <Home />
-    </Layout>
-  );
-};
 
 export function LocalRoutes() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<LayoutElement />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/areuin" element={<Areuin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
