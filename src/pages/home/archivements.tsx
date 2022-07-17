@@ -70,7 +70,7 @@ export function Archivemnts() {
         id="archivements"
         style={{
           zIndex: 2,
-          clipPath: "ellipse(150% 76% at 50% 77%)",
+          clipPath: "ellipse(200% 76% at 50% 77%)",
           //</>borderRadius: "50% 50% 0% 0% / 7% 7% 0% 0%",
           padding: 30,
           backgroundColor: "#fff",

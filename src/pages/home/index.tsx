@@ -4,8 +4,15 @@ import { Archivemnts } from "./archivements";
 import { CurriculumVitae } from "./curriculumVitae";
 import { Contact } from "./contact";
 import { Layout } from "../../components/layout";
+import { useEffect } from "react";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../../firebase";
 
 export function Home() {
+  useEffect(() => {
+    logEvent(analytics, "home_page");
+  }, []);
+
   return (
     <Layout>
       <Grid container style={{ backgroundColor: "black" }}>

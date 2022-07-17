@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Pages } from "./pages";
 import reportWebVitals from "./reportWebVitals";
 import "./assets/css/main.css";
+import "./firebase";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
