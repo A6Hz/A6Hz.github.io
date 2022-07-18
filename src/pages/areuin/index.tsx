@@ -5,7 +5,16 @@ export function Areuin() {
   return (
     <>
       <Layout>
-        <Grid>areuin</Grid>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <h1 style={{ margin: 0 }}>Areuin</h1>
+            The game is won from the inside
+          </Grid>
+
+          <Grid item xs={12}>
+            Body --- parallax --
+          </Grid>
+        </Grid>
       </Layout>
     </>
   );
