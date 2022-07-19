@@ -63,6 +63,7 @@ export const DesktopAppBar = () => {
           //"linear-gradient(to right, #017bc2, #2567b2, #36549f, #40408a, #452b74)",
           "linear-gradient(to right, #017bc2b3, #2567b2a6, #36549fab, #40408a80, #452b7480)",
         backdropFilter: "blur(10px)",
+        transition: "all 2s",
       }}
     >
       <Container maxWidth="xl">

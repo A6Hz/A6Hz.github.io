@@ -15,13 +15,12 @@ export function Home() {
 
   return (
     <Layout>
-      <Grid container style={{ backgroundColor: "black" }}>
+      <Grid container>
         <Grid item xs={12}>
           <Banner />
-        </Grid>
-        <Grid item xs={12}>
           <Archivemnts />
         </Grid>
+
         <Grid item xs={12}>
           <CurriculumVitae />
         </Grid>
