@@ -26,6 +26,7 @@ const scrollIntoViewWithOffset = (selector: string) => {
     window.scrollTo({
       behavior: "smooth",
       top:
+        -70 +
         element.getBoundingClientRect().top -
         document.body.getBoundingClientRect().top,
     });
