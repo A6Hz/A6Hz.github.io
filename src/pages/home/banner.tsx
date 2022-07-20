@@ -14,7 +14,7 @@ function ParallaxScene() {
     const scene = document.getElementById("scene");
     if (scene) {
       const parallaxInstance = new Parallax(scene);
-      parallaxInstance.friction(0.8, 0.8);
+      parallaxInstance.friction(0.01, 0.01);
     }
   }, []);
 

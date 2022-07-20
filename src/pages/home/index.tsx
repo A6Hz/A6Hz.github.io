@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Grid";
 import { Banner } from "./banner";
-import { Archivemnts } from "./archivements";
+import { Archivements } from "./archivements";
 import { CurriculumVitae } from "./curriculumVitae";
 import { Contact } from "./contact";
 import { Layout } from "../../components/layout";
@@ -18,7 +18,7 @@ export function Home() {
       <Grid container>
         <Grid item xs={12}>
           <Banner />
-          <Archivemnts />
+          <Archivements />
         </Grid>
 
         <Grid item xs={12}>

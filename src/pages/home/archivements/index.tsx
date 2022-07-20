@@ -6,22 +6,16 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
+import { History } from "./history";
 
-const archivementList = [
-  {
-    img: "https://jeanrojas.com/static/AreUin-c3127cd96139227e3297b0cc7f552787.png",
-    name: "areuin",
-    link: "/areuin",
-    description:
-      "Areuin is a digital sports betting product with Freeplay and Real Money play modality, with an innovative, fun, and social game scheme in which, unlike the competition, the player always benefits since he does not play against the house but against a group of friends or a local clan. ",
-  },
-  {
-    img: "https://jeanrojas.com/static/AreUin-c3127cd96139227e3297b0cc7f552787.png",
-    name: "areuin",
-    link: "text",
-    description: "text",
-  },
-];
+const archivementList = Array.from({ length: 6 }, (value) => ({
+  img: "https://jeanrojas.com/static/AreUin-c3127cd96139227e3297b0cc7f552787.png",
+  name: "areuin",
+  link: "/areuin",
+  description:
+    "Areuin is a digital sports betting product with Freeplay and Real Money play modality, with an innovative, fun, and social game scheme in which, unlike the competition, the player always benefits since he does not play against the house but against a group of friends or a local clan. ",
+}));
+console.log(archivementList);
 
 function MediaCard(props: {
   archivement: {
@@ -63,13 +57,13 @@ function MediaCard(props: {
   );
 }
 
-export function Archivemnts() {
+export function Archivements() {
   return (
     <>
       <section
         id="archivements"
         style={{
-          marginTop: "-40px",
+          marginTop: "-97px",
           zIndex: 2,
           clipPath: "ellipse(200% 76% at 50% 77%)",
           //</>borderRadius: "50% 50% 0% 0% / 7% 7% 0% 0%",
@@ -81,13 +75,12 @@ export function Archivemnts() {
       >
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            Archivements
-          </Grid>
-          {archivementList.map((archivement, key) => (
-            <Grid key={key} item xs={12} sm={6} md={4} lg={3}>
+            <History />
+
+            {/*archivementList.map((archivement, key) => (
               <MediaCard archivement={archivement} />
-            </Grid>
-          ))}
+            )) */}
+          </Grid>
         </Grid>
       </section>
     </>

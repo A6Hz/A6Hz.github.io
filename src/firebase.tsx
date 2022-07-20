@@ -9,4 +9,8 @@ const firebaseConfig: FirebaseOptions = JSON.parse(
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+if (process.env.REACT_APP_ENV === "develop") {
+  analytics.app.automaticDataCollectionEnabled = false;
+}
+
 export { analytics };
