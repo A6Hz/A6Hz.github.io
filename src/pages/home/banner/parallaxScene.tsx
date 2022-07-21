@@ -104,25 +104,13 @@ export function ParallaxScene() {
             style={{ marginTop: "50vh", marginLeft: 50 }}
           />
         </div>
-        <div data-depth="0.4">
+
+        <div data-depth="1">
           <img
             src={spaceship}
             alt=""
             style={{
-              marginTop: "30vh",
-              marginLeft: "30vw",
-              animation: "scaleAnimation 9s 0.1s infinite ease-in-out",
-              animationDirection: "alternate",
-            }}
-          />
-        </div>
-
-        <div data-depth="1">
-          <img
-            src={astro}
-            alt=""
-            style={{
-              marginTop: "10vh",
+              marginTop: "20vh",
               marginLeft: "60vw",
               animation: "scaleAnimation 7s 0.1s infinite ease-in-out",
               animationDirection: "alternate",
